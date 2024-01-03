@@ -133,20 +133,19 @@ public class AppointmentController {
 	}
 	
 	
-	@GetMapping("/search/appointments/{name}")
-	public ResponseEntity<ApiResponse> searchAppointment(@PathVariable("name") String name) {
-	    try {
-	        List<AppointmentDto> result = appointmentService.searchAppointment(name);
-
-	        // Create an ApiResponse with a success status, the current timestamp, and the list of results
-	        ApiResponse response = new ApiResponse(HttpStatus.OK.value(), "Search results", new Date(0), result);
-	        return ResponseEntity.ok(response);
-	    } catch (AppointmentException e) {
-	        // Handle the AppointmentException by returning an error response
-	        ApiResponse errorResponse = new ApiResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(), "Error: " + e.getMessage(), new Date(0), null);
-	        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
-	    }
-	}
-
+	/*
+	 * @GetMapping("/search/appointments/{name}") public ResponseEntity<ApiResponse>
+	 * searchAppointment(@PathVariable("name") String name) { try {
+	 * List<AppointmentDto> result = appointmentService.searchAppointment(name);
+	 * 
+	 * // Create an ApiResponse with a success status, the current timestamp, and
+	 * the list of results ApiResponse response = new
+	 * ApiResponse(HttpStatus.OK.value(), "Search results", new Date(0), result);
+	 * return ResponseEntity.ok(response); } catch (AppointmentException e) { //
+	 * Handle the AppointmentException by returning an error response ApiResponse
+	 * errorResponse = new ApiResponse(HttpStatus.INTERNAL_SERVER_ERROR.value(),
+	 * "Error: " + e.getMessage(), new Date(0), null); return new
+	 * ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR); } }
+	 */
 		
 }
