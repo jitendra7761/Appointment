@@ -15,8 +15,6 @@ public class ApiResponse {
 	        this.status = status;
 	        this.message = message;
 	         this.timestamp = new Date();
-	        
-	       
 	        this.data = data;
 	    }
 

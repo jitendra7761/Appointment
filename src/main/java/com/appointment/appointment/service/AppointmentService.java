@@ -17,17 +17,15 @@ public interface AppointmentService {
 	 List<AppointmentDto> getAllAppointments();
 	
 	//findAppointmentid
-	  Optional<AppointmentDto> getAppointmentById(Long id)throws AppointmentException;
+	 Optional<AppointmentDto> getAppointmentById(Long id)throws AppointmentException;
 	
 	//search Appointment
 	List<AppointmentDto> searchAppointment(String name) throws AppointmentException;
 			
-	//Update Appointment
-		
+	//Update Appointment	
 	AppointmentDto updateAppointment(AppointmentDto appointmentDto,Long appointmentId);
 	
 	//Delete Appointment
-	
     void deleteAppointment(Long appointmentId)throws AppointmentException;
 	
 	

@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
-	  @PostMapping("/login")
-	    public String login() {
-	        // Your login logic here
-	        // For simplicity, we're returning a string indicating a successful login
-	        return "Login Successful!";
-	    }
+	@PostMapping("/login")
+	public String login() {
+		// Your login logic here
+		// For simplicity, we're returning a string indicating a successful login
+		return "Login Successful!";
+	}
 }
