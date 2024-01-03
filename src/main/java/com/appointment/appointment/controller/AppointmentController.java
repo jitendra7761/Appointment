@@ -2,9 +2,9 @@ package com.appointment.appointment.controller;
 import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import com.appointment.appointment.exception.ApiResponse;
 import com.appointment.appointment.exception.AppointmentException;
-import com.appointment.appointment.model.Appointment;
 import com.appointment.appointment.payload.AppointmentDto;
 import com.appointment.appointment.service.AppointmentService;
 
@@ -26,9 +26,7 @@ public class AppointmentController {
 	
 	@Autowired
 	private AppointmentService appointmentService;
-	
-	
-	
+
 	@PostMapping("/appointments")
 	public ResponseEntity<ApiResponse> createAppointment(@RequestBody AppointmentDto appointmentDto) {
 	    try {
